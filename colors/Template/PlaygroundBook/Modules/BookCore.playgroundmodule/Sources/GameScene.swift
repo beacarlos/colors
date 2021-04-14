@@ -1,36 +1,64 @@
 import SpriteKit
 
 public class GameScene: SKScene {
-
-    private var label : SKLabelNode!
-    private var spinnyNode : SKShapeNode!
-
-    let dog = SKSpriteNode(imageNamed: "dog")
-
+    var backgroundColorCustom = UIColor(red: 0.99, green: 0.97, blue: 0.92, alpha: 1.00)
+    
+    // nodes
+    private var letterC: SKNode = {
+        let node = SKSpriteNode(imageNamed: "c")
+        node.position = CGPoint(x: -135, y: 0)
+        node.setScale(0.5)
+        return node
+    }()
+    
+    private var letterO1: SKNode = {
+        let node = SKSpriteNode(imageNamed: "o1")
+        node.position = CGPoint(x: -85, y: 0)
+        node.setScale(0.5)
+        return node
+    }()
+    
+    private var letterL: SKNode = {
+        let node = SKSpriteNode(imageNamed: "l")
+        node.position = CGPoint(x: -35, y: 0)
+        node.setScale(0.5)
+        node.zPosition = -1
+        return node
+    }()
+    
+    private var letterO: SKNode = {
+        let node = SKSpriteNode(imageNamed: "o")
+        node.position = CGPoint(x: 15, y: 0)
+        node.setScale(0.5)
+        return node
+    }()
+    
+    private var letterR: SKNode = {
+        let node = SKSpriteNode(imageNamed: "r")
+        node.position = CGPoint(x: 65, y: 0)
+        node.setScale(0.5)
+        node.zPosition = -1
+        return node
+    }()
+    
+    private var letterS: SKNode = {
+        let node = SKSpriteNode(imageNamed: "s")
+        node.position = CGPoint(x: 115, y: 0)
+        node.setScale(0.5)
+        node.zPosition = -1
+        return node
+    }()
+    
     override public func didMove(to view: SKView) {
-        // Get label node from scene and store it for use later
-        label = childNode(withName: "//helloLabel") as? SKLabelNode
-        label.alpha = 0.0
-        let fadeInOut = SKAction.sequence([.fadeIn(withDuration: 2.0),
-                                           .fadeOut(withDuration: 2.0)])
-        label.run(.repeatForever(fadeInOut))
+        self.backgroundColor = backgroundColorCustom
+        
 
-        // Create shape node to use during mouse interaction
-        let w = (size.width + size.height) * 0.02
-
-        spinnyNode = SKShapeNode(rectOf: CGSize(width: w, height: w), cornerRadius: w * 0.3)
-        spinnyNode.lineWidth = 2.5
-
-        let fadeAndRemove = SKAction.sequence([.wait(forDuration: 0.5),
-                                               .fadeOut(withDuration: 0.5),
-                                               .removeFromParent()])
-        spinnyNode.run(.repeatForever(.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-        spinnyNode.run(fadeAndRemove)
-
-        dog.position.x = self.frame.midX
-        dog.position.y = self.frame.midY
-
-        addChild(dog)
+        self.addChild(letterC)
+        self.addChild(letterO1)
+        self.addChild(letterL)
+        self.addChild(letterO)
+        self.addChild(letterR)
+        self.addChild(letterS)
     }
 
     @objc static override public var supportsSecureCoding: Bool {
@@ -42,27 +70,12 @@ public class GameScene: SKScene {
     }
 
     func touchDown(atPoint pos : CGPoint) {
-        guard let n = spinnyNode.copy() as? SKShapeNode else { return }
-
-        n.position = pos
-        n.strokeColor = SKColor.green
-        addChild(n)
     }
 
     func touchMoved(toPoint pos : CGPoint) {
-        guard let n = self.spinnyNode.copy() as? SKShapeNode else { return }
-
-        n.position = pos
-        n.strokeColor = SKColor.yellow
-        addChild(n)
     }
 
     func touchUp(atPoint pos : CGPoint) {
-        guard let n = spinnyNode.copy() as? SKShapeNode else { return }
-
-        n.position = pos
-        n.strokeColor = SKColor.red
-        addChild(n)
     }
 
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -85,4 +98,3 @@ public class GameScene: SKScene {
         // Called before each frame is rendered
     }
 }
-

@@ -6,21 +6,18 @@ public class GameScene: SKScene {
     // nodes
     private var letterC: SKNode = {
         let node = SKSpriteNode(imageNamed: "c")
-        node.position = CGPoint(x: -135, y: 0)
         node.setScale(0.5)
         return node
     }()
     
     private var letterO1: SKNode = {
         let node = SKSpriteNode(imageNamed: "o1")
-        node.position = CGPoint(x: -85, y: 0)
         node.setScale(0.5)
         return node
     }()
     
     private var letterL: SKNode = {
         let node = SKSpriteNode(imageNamed: "l")
-        node.position = CGPoint(x: -35, y: 0)
         node.setScale(0.5)
         node.zPosition = -1
         return node
@@ -28,14 +25,12 @@ public class GameScene: SKScene {
     
     private var letterO: SKNode = {
         let node = SKSpriteNode(imageNamed: "o")
-        node.position = CGPoint(x: 15, y: 0)
         node.setScale(0.5)
         return node
     }()
     
     private var letterR: SKNode = {
         let node = SKSpriteNode(imageNamed: "r")
-        node.position = CGPoint(x: 65, y: 0)
         node.setScale(0.5)
         node.zPosition = -1
         return node
@@ -43,7 +38,6 @@ public class GameScene: SKScene {
     
     private var letterS: SKNode = {
         let node = SKSpriteNode(imageNamed: "s")
-        node.position = CGPoint(x: 115, y: 0)
         node.setScale(0.5)
         node.zPosition = -1
         return node
@@ -59,6 +53,20 @@ public class GameScene: SKScene {
         self.addChild(letterO)
         self.addChild(letterR)
         self.addChild(letterS)
+        
+        moveLetterAction(node: letterC, x: -135)
+        moveLetterAction(node: letterO1, x: -85)
+        moveLetterAction(node: letterL, x: -35)
+        moveLetterAction(node: letterO, x: 15)
+        moveLetterAction(node: letterR, x: 65)
+        moveLetterAction(node: letterS, x: 115)
+
+
+    }
+    
+    private func moveLetterAction(node: SKNode, x: CGFloat, duration: TimeInterval = 0.5) {
+        let movePlayerAction = SKAction.moveTo(x: x, duration: duration)
+        node.run(movePlayerAction)
     }
 
     @objc static override public var supportsSecureCoding: Bool {

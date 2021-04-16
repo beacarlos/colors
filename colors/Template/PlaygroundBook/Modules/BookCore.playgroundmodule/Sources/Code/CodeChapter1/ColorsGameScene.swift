@@ -1,6 +1,15 @@
-import SpriteKit
+//
+//  ColorsGameScene.swift
+//  BookCore
+//
+//  Created by Beatriz Carlos on 15/04/21.
+//
 
-public class GameScene: SKScene {
+import PlaygroundSupport
+import SpriteKit
+import UIKit
+
+public class ColorsGameScene: SKScene {
     var backgroundColorCustom = UIColor(red: 0.99, green: 0.97, blue: 0.92, alpha: 1.00)
     
     // nodes
@@ -61,7 +70,7 @@ public class GameScene: SKScene {
         moveLetterAction(node: letterR, x: 65)
         moveLetterAction(node: letterS, x: 115)
 
-
+//        PlaygroundPage.current.navigateTo(page: .next)
     }
     
     private func moveLetterAction(node: SKNode, x: CGFloat, duration: TimeInterval = 0.5) {

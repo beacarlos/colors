@@ -3,12 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>Introduction</string>
-	<key>Pages</key>
-	<array>
-		<string>Colors.playgroundpage</string>
-		<string>Emotions.playgroundpage</string>
-		<string>PrimaryColors.playgroundpage</string>
-	</array>
+	<string>Primary Colors</string>
+	<key>LiveViewEdgeToEdge</key>
+	<true/>
+	<key>LiveViewMode</key>
+	<string>VisibleByDefault</string>
 </dict>
 </plist>

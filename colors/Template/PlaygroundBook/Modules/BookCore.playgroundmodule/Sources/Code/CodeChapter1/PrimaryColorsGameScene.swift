@@ -34,10 +34,21 @@ public class PrimaryColorsGameScene: SKScene {
         return node
     }()
     
+    private var yellowArrow: SKNode = {
+        let node = SKSpriteNode(imageNamed: "setaYellow")
+        node.position = CGPoint(x: 130, y: 130)
+        node.setScale(0.15)
+        node.zRotation = 0.8
+        node.zPosition = -1
+        node.isUserInteractionEnabled = false
+        return node
+    }()
+    
     private var yellowText: SKNode = {
         let node = SKSpriteNode(imageNamed: "yellow")
         node.position = CGPoint(x: 130, y: 150)
         node.setScale(0.15)
+        node.name = "yellowText"
         return node
     }()
     
@@ -45,6 +56,8 @@ public class PrimaryColorsGameScene: SKScene {
         let node = SKSpriteNode(imageNamed: "Blue")
         node.position = CGPoint(x: 65, y: 50)
         node.setScale(0.15)
+        node.name = "blueText"
+        node.isUserInteractionEnabled = false
         return node
     }()
     
@@ -59,11 +72,21 @@ public class PrimaryColorsGameScene: SKScene {
     
     private var redText: SKNode = {
         let node = SKSpriteNode(imageNamed: "Red")
-        node.position = CGPoint(x: 130, y: 50)
+        node.position = CGPoint(x: 140, y: 50)
         node.setScale(0.15)
+        node.name = "redText"
+        node.isUserInteractionEnabled = false
         return node
     }()
     
+    private var redArrow: SKNode = {
+        let node = SKSpriteNode(imageNamed: "setaRed")
+        node.position = CGPoint(x: 130, y: 70)
+        node.setScale(0.15)
+        node.zRotation = -0.5
+        node.zPosition = -1
+        return node
+    }()
     
     override public func didMove(to view: SKView) {
         self.backgroundColor = backgroundColorCustom
@@ -71,13 +94,13 @@ public class PrimaryColorsGameScene: SKScene {
         self.addChild(primaryColorsText)
         self.addChild(circleDote)
         self.addChild(yellowText)
+        self.addChild(yellowArrow)
         self.addChild(blueText)
         self.addChild(blueArrow)
         self.addChild(redText)
-
-        let fadeAndRemove = SKAction.sequence([.wait(forDuration: 0.2),
-                                               .fadeOut(withDuration: 0.5),
-                                               .removeFromParent()])
+        self.addChild(redArrow)
+        
+        let fadeAndRemove = SKAction.sequence([.wait(forDuration: 0.2), .fadeOut(withDuration: 0.5), .removeFromParent()])
         spinnyNode.run(fadeAndRemove)
     }
     
@@ -90,7 +113,7 @@ public class PrimaryColorsGameScene: SKScene {
     }
     
     func touchDown(atPoint pos : CGPoint) {
-
+        
     }
     
     func touchMoved(toPoint pos : CGPoint) {
@@ -98,12 +121,24 @@ public class PrimaryColorsGameScene: SKScene {
     
     func touchUp(atPoint pos : CGPoint) {
         guard let n = spinnyNode.copy() as? SKShapeNode else { return }
-
+        
         n.position = pos
-        addChild(n)
+        self.addChild(n)
     }
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for t in touches {
+            let node = self.atPoint(t.location(in :self))
+            //          if(node.name == "sad") {
+            //            sad.alpha = 0
+            //            self.backgroundColor = UIColor(red: 0.99, green: 0.91, blue: 0.70, alpha: 1.00)
+            //            happy.alpha = 1
+            //
+            //          }
+            
+            if let redTextNode = node.name, redTextNode == "redText" {
+            }
+        }
     }
     
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

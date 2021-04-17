@@ -26,7 +26,7 @@ public class PrimaryColorsGameScene: SKScene {
         node.setScale(0.15)
         return node
     }()
-    
+        
     private var circleDote: SKNode = {
         let node = SKSpriteNode(imageNamed: "circledote")
         node.position = CGPoint(x: 100, y: 100)

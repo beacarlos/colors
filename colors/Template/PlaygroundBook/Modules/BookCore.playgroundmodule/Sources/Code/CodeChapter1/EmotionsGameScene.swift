@@ -18,7 +18,7 @@ public class EmotionsGameScene: SKScene {
         node.setScale(0.1)
         node.position = CGPoint(x: 100, y: 100)
         node.name = "sad"
-        node.isUserInteractionEnabled = false;
+        node.isUserInteractionEnabled = false
         return node
     }()
     
@@ -61,13 +61,15 @@ public class EmotionsGameScene: SKScene {
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches {
-          let node = self.atPoint(t.location(in :self))
-          if(node.name == "sad") {
-            sad.alpha = 0
-            self.backgroundColor = UIColor(red: 0.99, green: 0.91, blue: 0.70, alpha: 1.00)
-            happy.alpha = 1
-
-          }
+            let node = self.atPoint(t.location(in :self))
+            if(node.name == "sad") {
+                sad.alpha = 0
+                self.backgroundColor = UIColor(red: 0.99, green: 0.91, blue: 0.70, alpha: 1.00)
+                happy.alpha = 1
+                let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+                notificationFeedbackGenerator.prepare()
+                notificationFeedbackGenerator.notificationOccurred(.success)
+            }
         }
     }
     

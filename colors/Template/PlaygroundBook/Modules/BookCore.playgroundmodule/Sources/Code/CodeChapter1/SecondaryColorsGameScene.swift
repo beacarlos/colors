@@ -35,9 +35,18 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    // UIColor.PrimaryColors.yellow
+    private var circleDoteSeven: SKNode = {
+        let node = SKSpriteNode(imageNamed: "circledote")
+        node.position = CGPoint(x: 65, y: 140)
+        node.zPosition = -1
+        node.setScale(0.055)
+        node.alpha = 1
+        return node
+    }()
     private var circleYellow: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = UIColor.PrimaryColors.yellow
+        node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 65, y: 140)
         node.name = "circleYellow"
@@ -60,9 +69,18 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    // UIColor.PrimaryColors.red
+    private var circleDoteSix: SKNode = {
+        let node = SKSpriteNode(imageNamed: "circledote")
+        node.position = CGPoint(x: 95, y: 140)
+        node.zPosition = -1
+        node.setScale(0.055)
+        node.alpha = 1
+        return node
+    }()
     private var circleRed: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = UIColor.PrimaryColors.red
+        node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 95, y: 140)
         node.name = "circleRed"
@@ -84,9 +102,10 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    // UIColor.SecondaryColors.orange
     private var circleOrange: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = UIColor.SecondaryColors.orange
+        node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 130, y: 140)
         node.name = "circleOrange"
@@ -102,9 +121,18 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    // UIColor.PrimaryColors.blue
+    private var circleDoteFour: SKNode = {
+        let node = SKSpriteNode(imageNamed: "circledote")
+        node.position = CGPoint(x: 65, y: 100)
+        node.zPosition = -1
+        node.setScale(0.055)
+        node.alpha = 1
+        return node
+    }()
     private var circleBlue: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = UIColor.PrimaryColors.blue
+        node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 65, y: 100)
         node.name = "circleBlue"
@@ -126,9 +154,18 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    // UIColor.PrimaryColors.yellow
+    private var circleDoteThree: SKNode = {
+        let node = SKSpriteNode(imageNamed: "circledote")
+        node.position = CGPoint(x: 95, y: 100)
+        node.zPosition = -1
+        node.setScale(0.055)
+        node.alpha = 1
+        return node
+    }()
     private var circleYellowTwo: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = UIColor.PrimaryColors.yellow
+        node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 95, y: 100)
         node.name = "circleYellowTwo"
@@ -150,9 +187,10 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    // UIColor.SecondaryColors.green
     private var circleGreen: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = UIColor.SecondaryColors.green
+        node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 130, y: 100)
         node.name = "circleGreen"
@@ -168,9 +206,18 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    // UIColor.PrimaryColors.red
+    private var circleDoteTwo: SKNode = {
+        let node = SKSpriteNode(imageNamed: "circledote")
+        node.position = CGPoint(x: 65, y: 60)
+        node.zPosition = -1
+        node.setScale(0.055)
+        node.alpha = 1
+        return node
+    }()
     private var circleRedTwo: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = UIColor.PrimaryColors.red
+        node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 65, y: 60)
         node.name = "circleRedTwo"
@@ -193,9 +240,18 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    // UIColor.PrimaryColors.blue
+    private var circleDote: SKNode = {
+        let node = SKSpriteNode(imageNamed: "circledote")
+        node.position = CGPoint(x: 95, y: 60)
+        node.zPosition = -1
+        node.setScale(0.055)
+        node.alpha = 1
+        return node
+    }()
     private var circleBlueTwo: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
-        node.fillColor = UIColor.PrimaryColors.blue
+        node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 95, y: 60)
         node.name = "circleBlueTwo"
@@ -219,15 +275,6 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
-    private var circleDote: SKNode = {
-        let node = SKSpriteNode(imageNamed: "circledote")
-        node.position = CGPoint(x: 130, y: 60)
-        node.zPosition = -1
-        node.setScale(0.055)
-        node.alpha = 1
-        return node
-    }()
-    
     // UIColor.SecondaryColors.purple
     private var circlePurple: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
@@ -240,6 +287,38 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
+    
+    // colors primary
+    private var circlePaleteYellow: SKShapeNode = {
+        let node = SKShapeNode(circleOfRadius: 6)
+        node.fillColor = UIColor.PrimaryColors.yellow
+        node.strokeColor = SKColor.clear
+        node.position = CGPoint(x: 100, y: 25)
+        node.name = "circlePaleteYellow"
+        node.isUserInteractionEnabled = false
+        return node
+    }()
+    
+    private var circlePaleteRed: SKShapeNode = {
+        let node = SKShapeNode(circleOfRadius: 6)
+        node.fillColor = UIColor.PrimaryColors.red
+        node.strokeColor = SKColor.clear
+        node.position = CGPoint(x: 80, y: 25)
+        node.name = "circlePaleteYellow"
+        node.isUserInteractionEnabled = false
+        return node
+    }()
+    
+    private var circlePaleteBlue: SKShapeNode = {
+        let node = SKShapeNode(circleOfRadius: 6)
+        node.fillColor = UIColor.PrimaryColors.blue
+        node.strokeColor = SKColor.clear
+        node.position = CGPoint(x: 120, y: 25)
+        node.name = "circlePaleteYellow"
+        node.isUserInteractionEnabled = false
+        return node
+    }()
+    
     override public func didMove(to view: SKView) {
         self.backgroundColor = backgroundColorCustom
         
@@ -247,35 +326,57 @@ public class SecondaryColorsGameScene: SKScene {
         
         //row 1
         self.addChild(yellowBoldTextTwo)
+        self.addChild(circleDoteSeven)
         self.addChild(circleYellow)
+        
         self.addChild(plus)
+        
         self.addChild(redBoldText)
+        self.addChild(circleDoteSix)
         self.addChild(circleRed)
-        self.addChild(orangeBoldText)
+        
         self.addChild(equal)
+
+        self.addChild(orangeBoldText)
         self.addChild(circleOrange)
         
         //row 2
+        self.addChild(circleDoteFour)
         self.addChild(blueBoldTextTwo)
         self.addChild(circleBlue)
+        
         self.addChild(plusTwo)
+        
+        self.addChild(circleDoteThree)
         self.addChild(yellowBoldText)
         self.addChild(circleYellowTwo)
+        
         self.addChild(equalTwo)
+        
         self.addChild(greenBoldText)
         self.addChild(circleGreen)
         
         //row 3
+        self.addChild(circleDoteTwo)
         self.addChild(redBoldTextTwo)
         self.addChild(circleRedTwo)
+        
         self.addChild(plusThree)
+        
+        self.addChild(circleDote)
         self.addChild(blueBoldText)
         self.addChild(circleBlueTwo)
+        
         self.addChild(equalThree)
+        
         self.addChild(PurpleBoldText)
         self.addChild(circlePurple)
         
-        self.addChild(circleDote)
+        
+        // Palete colors primary
+        self.addChild(circlePaleteYellow)
+        self.addChild(circlePaleteRed)
+        self.addChild(circlePaleteBlue)
         
 //        let fadeAndRemove = SKAction.sequence([.scale(to: 1, duration: 0.5), .scale(by: 0.5, duration: 0.5), .fadeOut(withDuration: 0.5), .removeFromParent()])
         let fadeAndRemove = SKAction.sequence([.scale(to: 1, duration: 0.15), .scale(to: 0.5, duration: 0.2), .removeFromParent()])

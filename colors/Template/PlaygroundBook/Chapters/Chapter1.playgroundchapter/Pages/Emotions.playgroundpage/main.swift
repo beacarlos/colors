@@ -7,14 +7,7 @@
 //#-end-hidden-code
 
 /*:
- # Color. It plays a vital role in the design and everyday life.
- ## A little about myself
- 
- Hi, my name is Beatriz Carlos, but they call me Bia. 🧡
- 
- I'm a research intern at the **Apple Developer Academy - IFCE, Brasil**, and an undergraduate of **Computer science** at IFCE the Federal Institute of Education, Science and Technology of Ceará.
-
-
+ # Color: It plays a vital role in the design and everyday life.
  ## Prepared for storytime?
  When I imagined a theme for my playground, something that is a hobby for me came to mind.
  
@@ -26,17 +19,19 @@
  I'm going to teach you a little bit about this magical world. Enjoy!
 
  ## Introduction to color theory. 🎨
- Color. It plays a vital role in the design and everyday life
  Colors are everywhere, but have you ever wondered why they are where they are?
  Do you see the same color as your friends?
  Well, if you have never asked yourself about it, it is a good starting point for studying color theory. It is to realize that color influences and can evoke a climate or a feeling.
 
-*TAP to run code to preview and TAP on the sad face to make him happy. *
+ * Experiment:
+  With all these in mind, try to do the activity:
+  
+      1. Tap to Run My Code
+      2. Tap on the sad face to make him happy.
+ 
+ **Look how amazing the power of colors is! 🌈**
 
-**Look how amazing the power of colors is! 🌈**
-
- To use it all you need is a little understanding, and you will look at the colors in a new way. Let's learn?
-
+ To use it all you need is a little understanding, and you will look at the colors in a new way. Let's learn? \
  Let's start with the basics, the principle.
 */
 

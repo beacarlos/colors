@@ -7,6 +7,22 @@
 //
 //#-end-hidden-code
 
+/*:
+ # Secondary colors
+ From yellow, blue and red, we can reach orange, purple and green, the so-called **secondary colors**. So, let's look at the mixtures that resulted in these non-pure tones:
+ 
+ ### Mixture of colors:
+  * Orange is the result of the combination of yellow and red.
+  * Green is the result of the combination of blue and yellow.
+  * Purple (or violet) is the result of a mixture of red and blue colors.
+ 
+ * Experiment:
+  With all these in mind, try to do the activity:
+  
+      1. Tap to Run My Code
+      2. Tap on the primary colors and will show you the resulting color.
+      3. Have fun, repeat until all colors appear. 🎉
+ */
 
 //#-hidden-code
 import PlaygroundSupport

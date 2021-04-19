@@ -36,14 +36,6 @@ public class SecondaryColorsGameScene: SKScene {
     }()
     
     // UIColor.PrimaryColors.yellow
-    private var circleDoteSeven: SKNode = {
-        let node = SKSpriteNode(imageNamed: "circledote")
-        node.position = CGPoint(x: 65, y: 140)
-        node.zPosition = -1
-        node.setScale(0.055)
-        node.alpha = 1
-        return node
-    }()
     private var circleYellow: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
         node.fillColor = .white
@@ -70,20 +62,13 @@ public class SecondaryColorsGameScene: SKScene {
     }()
     
     // UIColor.PrimaryColors.red
-    private var circleDoteSix: SKNode = {
-        let node = SKSpriteNode(imageNamed: "circledote")
-        node.position = CGPoint(x: 95, y: 140)
-        node.zPosition = -1
-        node.setScale(0.055)
-        node.alpha = 1
-        return node
-    }()
     private var circleRed: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
         node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 95, y: 140)
         node.name = "circleRed"
+        node.zPosition = 1
         node.isUserInteractionEnabled = false
         return node
     }()
@@ -122,14 +107,6 @@ public class SecondaryColorsGameScene: SKScene {
     }()
     
     // UIColor.PrimaryColors.blue
-    private var circleDoteFour: SKNode = {
-        let node = SKSpriteNode(imageNamed: "circledote")
-        node.position = CGPoint(x: 65, y: 100)
-        node.zPosition = -1
-        node.setScale(0.055)
-        node.alpha = 1
-        return node
-    }()
     private var circleBlue: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
         node.fillColor = .white
@@ -155,14 +132,6 @@ public class SecondaryColorsGameScene: SKScene {
     }()
     
     // UIColor.PrimaryColors.yellow
-    private var circleDoteThree: SKNode = {
-        let node = SKSpriteNode(imageNamed: "circledote")
-        node.position = CGPoint(x: 95, y: 100)
-        node.zPosition = -1
-        node.setScale(0.055)
-        node.alpha = 1
-        return node
-    }()
     private var circleYellowTwo: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
         node.fillColor = .white
@@ -207,14 +176,6 @@ public class SecondaryColorsGameScene: SKScene {
     }()
     
     // UIColor.PrimaryColors.red
-    private var circleDoteTwo: SKNode = {
-        let node = SKSpriteNode(imageNamed: "circledote")
-        node.position = CGPoint(x: 65, y: 60)
-        node.zPosition = -1
-        node.setScale(0.055)
-        node.alpha = 1
-        return node
-    }()
     private var circleRedTwo: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
         node.fillColor = .white
@@ -237,23 +198,17 @@ public class SecondaryColorsGameScene: SKScene {
         let node = SKSpriteNode(imageNamed: "BlueBold")
         node.position = CGPoint(x: 95, y: 75)
         node.setScale(0.12)
+        node.name = "blueBoldText"
         return node
     }()
     
     // UIColor.PrimaryColors.blue
-    private var circleDote: SKNode = {
-        let node = SKSpriteNode(imageNamed: "circledote")
-        node.position = CGPoint(x: 95, y: 60)
-        node.zPosition = -1
-        node.setScale(0.055)
-        node.alpha = 1
-        return node
-    }()
     private var circleBlueTwo: SKShapeNode = {
         let node = SKShapeNode(circleOfRadius: 10)
         node.fillColor = .white
         node.strokeColor = SKColor.clear
         node.position = CGPoint(x: 95, y: 60)
+        node.zPosition = 1
         node.name = "circleBlueTwo"
         node.isUserInteractionEnabled = false
         return node
@@ -287,38 +242,6 @@ public class SecondaryColorsGameScene: SKScene {
         return node
     }()
     
-    
-    // colors primary
-    private var circlePaleteYellow: SKShapeNode = {
-        let node = SKShapeNode(circleOfRadius: 6)
-        node.fillColor = UIColor.PrimaryColors.yellow
-        node.strokeColor = SKColor.clear
-        node.position = CGPoint(x: 100, y: 25)
-        node.name = "circlePaleteYellow"
-        node.isUserInteractionEnabled = false
-        return node
-    }()
-    
-    private var circlePaleteRed: SKShapeNode = {
-        let node = SKShapeNode(circleOfRadius: 6)
-        node.fillColor = UIColor.PrimaryColors.red
-        node.strokeColor = SKColor.clear
-        node.position = CGPoint(x: 80, y: 25)
-        node.name = "circlePaleteYellow"
-        node.isUserInteractionEnabled = false
-        return node
-    }()
-    
-    private var circlePaleteBlue: SKShapeNode = {
-        let node = SKShapeNode(circleOfRadius: 6)
-        node.fillColor = UIColor.PrimaryColors.blue
-        node.strokeColor = SKColor.clear
-        node.position = CGPoint(x: 120, y: 25)
-        node.name = "circlePaleteYellow"
-        node.isUserInteractionEnabled = false
-        return node
-    }()
-    
     override public func didMove(to view: SKView) {
         self.backgroundColor = backgroundColorCustom
         
@@ -326,28 +249,24 @@ public class SecondaryColorsGameScene: SKScene {
         
         //row 1
         self.addChild(yellowBoldTextTwo)
-        self.addChild(circleDoteSeven)
         self.addChild(circleYellow)
         
         self.addChild(plus)
         
         self.addChild(redBoldText)
-        self.addChild(circleDoteSix)
         self.addChild(circleRed)
         
         self.addChild(equal)
-
+        
         self.addChild(orangeBoldText)
         self.addChild(circleOrange)
         
         //row 2
-        self.addChild(circleDoteFour)
         self.addChild(blueBoldTextTwo)
         self.addChild(circleBlue)
         
         self.addChild(plusTwo)
         
-        self.addChild(circleDoteThree)
         self.addChild(yellowBoldText)
         self.addChild(circleYellowTwo)
         
@@ -357,13 +276,11 @@ public class SecondaryColorsGameScene: SKScene {
         self.addChild(circleGreen)
         
         //row 3
-        self.addChild(circleDoteTwo)
         self.addChild(redBoldTextTwo)
         self.addChild(circleRedTwo)
         
         self.addChild(plusThree)
         
-        self.addChild(circleDote)
         self.addChild(blueBoldText)
         self.addChild(circleBlueTwo)
         
@@ -372,22 +289,11 @@ public class SecondaryColorsGameScene: SKScene {
         self.addChild(PurpleBoldText)
         self.addChild(circlePurple)
         
-        
-        // Palete colors primary
-        self.addChild(circlePaleteYellow)
-        self.addChild(circlePaleteRed)
-        self.addChild(circlePaleteBlue)
-        
-//        let fadeAndRemove = SKAction.sequence([.scale(to: 1, duration: 0.5), .scale(by: 0.5, duration: 0.5), .fadeOut(withDuration: 0.5), .removeFromParent()])
         let fadeAndRemove = SKAction.sequence([.scale(to: 1, duration: 0.15), .scale(to: 0.5, duration: 0.2), .removeFromParent()])
-        //        let fadeAndRemove = SKAction.scale(by: 0.2, duration: 2)
-
         spinnyNode.run(fadeAndRemove)
     }
     
     @objc static override public var supportsSecureCoding: Bool {
-        // SKNode conforms to NSSecureCoding, so any subclass going
-        // through the decoding process must support secure coding
         get {
             return true
         }
@@ -407,45 +313,54 @@ public class SecondaryColorsGameScene: SKScene {
         self.addChild(n)
     }
     
+    var changeColorsCicle: [String] = []
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let n = spinnyNode.copy() as? SKShapeNode else { return }
         
         for t in touches {
             let node = self.atPoint(t.location(in :self))
-            changePurpleColor(node: node, n: n)
+            n.fillColor = .white
+            
+            changeColor(node: node, circleNode: self.circleYellow, textNode: "circleYellow", color: UIColor.PrimaryColors.yellow)
+            changeColor(node: node, circleNode: self.circleRed, textNode: "circleRed", color: UIColor.PrimaryColors.red)
+            
+            changeColor(node: node, circleNode: self.circleBlue, textNode: "circleBlue", color: UIColor.PrimaryColors.blue)
+            changeColor(node: node, circleNode: self.circleYellowTwo, textNode: "circleYellowTwo", color: UIColor.PrimaryColors.yellow)
+            
+            changeColor(node: node, circleNode: self.circleRedTwo, textNode: "circleRedTwo", color: UIColor.PrimaryColors.red)
+            changeColor(node: node, circleNode: self.circleBlueTwo, textNode: "circleBlueTwo", color: UIColor.PrimaryColors.blue)
+            
+            if self.changeColorsCicle.contains("circleRedTwo") &&  self.changeColorsCicle.contains("circleBlueTwo") {
+                self.circlePurple.fillColor = .purple
+            }
+            
+            if self.changeColorsCicle.contains("circleBlue") &&  self.changeColorsCicle.contains("circleYellowTwo") {
+                self.circleGreen.fillColor = UIColor.SecondaryColors.green
+            }
+            
+            if self.changeColorsCicle.contains("circleYellow") &&  self.changeColorsCicle.contains("circleRed") {
+                self.circleOrange.fillColor = UIColor.SecondaryColors.orange
+            }
+            
+            if self.changeColorsCicle.count == 6 {
+                PlaygroundPage.current.assessmentStatus = .pass(message: "Let's see the next page! [Go to next page](@next)")
+            }
         }
     }
     
-    func changePurpleColor(node: SKNode, n : SKShapeNode) {
-        if let purpleCircleNode = node.name, purpleCircleNode == "circlePurple" {
-            n.fillColor = UIColor.SecondaryColors.purple
-            let changeColor : UIColor = (self.circlePurple.fillColor == UIColor.SecondaryColors.purple) ? .gray : UIColor.SecondaryColors.purple
-            self.circlePurple.run(shapeColorChangeAction(from: .white, to: changeColor, withDuration: 1.5))
-            let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
-            notificationFeedbackGenerator.prepare()
-            notificationFeedbackGenerator.notificationOccurred(.success)
-            self.circleDote.alpha = 0
-        }
-        
-        if let PurpleBoldTextNode = node.name, PurpleBoldTextNode == "PurpleBoldText" {
-            n.fillColor = UIColor.SecondaryColors.purple
+    func changeColor(node: SKNode, circleNode: SKShapeNode, textNode: String, color: UIColor) {
+        if let purpleCircleNode = node.name, purpleCircleNode == textNode {
+            let changeColor : UIColor = (circleNode.fillColor == color) ? .gray : color
+            circleNode.run(shapeColorChangeAction(from: .white, to: changeColor, withDuration: 1.5))
             
-            let changeColor : UIColor = (self.circlePurple.fillColor == UIColor.SecondaryColors.purple) ? .gray : UIColor.SecondaryColors.purple
-            self.circlePurple.run(shapeColorChangeAction(from: .white, to: changeColor, withDuration: 1.5))
-            
-            let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
-            notificationFeedbackGenerator.prepare()
-            notificationFeedbackGenerator.notificationOccurred(.success)
-            self.circleDote.alpha = 0
+            self.changeColorsCicle.append(textNode)
         }
     }
     
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { touchMoved(toPoint: t.location(in: self)) }
     }
     
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { touchUp(atPoint: t.location(in: self)) }
     }
     
     override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -460,13 +375,13 @@ public class SecondaryColorsGameScene: SKScene {
         
         func components(for color: UIColor) -> [CGFloat] {
             var comp = color.cgColor.components!
-            // converts [white, alpha] to [red, green, blue, alpha]
             if comp.count < 4 {
                 comp.insert(comp[0], at: 0)
                 comp.insert(comp[0], at: 0)
             }
             return comp
         }
+        
         func lerp(a: CGFloat, b: CGFloat, fraction: CGFloat) -> CGFloat {
             return (b-a) * fraction + a
         }

@@ -22,6 +22,7 @@
 		5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2F97E2054B6E400191409 /* ManifestPlist.strings */; };
 		5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9AD2054BBF300191409 /* LiveViewController.swift */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
+		772B7A18262B760900FCD5F9 /* ThankYouGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B7A17262B760900FCD5F9 /* ThankYouGameScene.swift */; };
 		774159082627691A00D987EE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 774159072627691A00D987EE /* GameScene.sks */; };
 		7741591226276AC600D987EE /* capa.png in Resources */ = {isa = PBXBuildFile; fileRef = 7741591126276AC600D987EE /* capa.png */; };
 		7757A7192629C915000C7A4C /* Ext+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7757A7182629C915000C7A4C /* Ext+UIColor.swift */; };
@@ -148,6 +149,7 @@
 		5EF2F9AB2054BBF300191409 /* libBookCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBookCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2F9AD2054BBF300191409 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
+		772B7A17262B760900FCD5F9 /* ThankYouGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouGameScene.swift; sourceTree = "<group>"; };
 		774159072627691A00D987EE /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		7741591126276AC600D987EE /* capa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = capa.png; path = ../../../../assets/capa/capa.png; sourceTree = "<group>"; };
 		7757A7182629C915000C7A4C /* Ext+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIColor.swift"; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				77AB3AB326292CEC000DB708 /* EmotionsGameScene.swift */,
 				77E9923D2629368700F6CEF4 /* PrimaryColorsGameScene.swift */,
 				77F482922629C3FB000A7DE2 /* SecondaryColorsGameScene.swift */,
+				772B7A17262B760900FCD5F9 /* ThankYouGameScene.swift */,
 			);
 			path = CodeChapter1;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				77AB3AB426292CEC000DB708 /* EmotionsGameScene.swift in Sources */,
 				5E3196F32061DEA40077BBD7 /* LiveViewSupport.swift in Sources */,
 				77E9923E2629368700F6CEF4 /* PrimaryColorsGameScene.swift in Sources */,
+				772B7A18262B760900FCD5F9 /* ThankYouGameScene.swift in Sources */,
 				77AB3AAA26292C01000DB708 /* ColorsGameScene.swift in Sources */,
 				5EF2F9AE2054BBF300191409 /* LiveViewController.swift in Sources */,
 			);

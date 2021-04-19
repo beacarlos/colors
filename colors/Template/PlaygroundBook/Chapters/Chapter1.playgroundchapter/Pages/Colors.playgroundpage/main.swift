@@ -19,7 +19,7 @@
 /*:
  
  Hi, my name is **Beatriz**, but people call me Bia. That's a picture of myself on the right. 👉🏼
- 
+
  I'm a research intern at **Apple Developer Academy - IFCE**, and undergraduate of **Computer science** at **Instituto Federal de Educação, Ciência e Tecnologia do Ceará**.
  
  ### Prepared for storytime?

@@ -69,6 +69,8 @@ public class EmotionsGameScene: SKScene {
                 let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
                 notificationFeedbackGenerator.prepare()
                 notificationFeedbackGenerator.notificationOccurred(.success)
+                
+                PlaygroundPage.current.assessmentStatus = .pass(message: "Let's see the next page! [Go to next page](@next)")
             }
         }
     }
